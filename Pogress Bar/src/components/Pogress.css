@@ -1,0 +1,11 @@
+.bar{
+    width: 100%;
+    background-color: rgb(204, 207, 207);
+    height: 20px;
+    border-radius: 5px;
+}
+.bar2{
+    background-color: rgb(84, 210, 21);
+    height: 20px;
+    border-radius: 5px;
+}
