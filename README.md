@@ -2,6 +2,7 @@
 
 
 ## 1. Basic Exercises
+0. Create a Pogress bar.
 1. Create a "Hello World" React component.
 2. Build a functional component that renders a simple greeting.
 3. Create a class component that displays "Welcome to React."
