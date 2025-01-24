@@ -1,0 +1,22 @@
+.card{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+}
+.card h1{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card p{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
