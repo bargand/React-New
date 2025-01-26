@@ -1,0 +1,20 @@
+.textForm {
+  width: 300px;
+  height: 30px;
+  border: 1.5px solid #00000038;
+  border-radius: 7px;
+  margin: 5px;
+  font-size: 14px;
+  padding: 5px;
+  color: black;
+}
+.submitButton{
+    width: 150px;
+  height: 40px;
+  background-color: #318502;
+  color: white;
+  font-size: 16px;
+  border: 1px solid green;
+  cursor: pointer;
+  border-radius: 5px;
+}
