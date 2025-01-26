@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-import Navbar from './Components/Navbar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
 import Body from './components/Body'
+import About from './components/About'
+import Contact from './components/Contact'
 
 const App = () => {
   const [Mode, setMode] = useState("light")
@@ -20,8 +23,14 @@ const App = () => {
   }
   return (
     <>
+    <BrowserRouter>
     <Navbar mode ={Mode} toggelMode={toggelMode} text={Text}/>
-    <Body mode={Mode}/>
+    <Routes>
+      <Route element={<Body mode={Mode}/>} path='/'/>
+      <Route element={<About/>} path='/about'/>
+      <Route element={<Contact/>} path='/contact'/>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
