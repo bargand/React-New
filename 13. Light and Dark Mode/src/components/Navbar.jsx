@@ -1,12 +1,16 @@
 import React from "react";
 
-const Navbar = () => {
+export default function Navbar(props) {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${
+          props.mode === "dark" ? "dark" : "light"
+        }`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Navbar
+            Bargand
           </a>
           <button
             className="navbar-toggler"
@@ -22,34 +26,67 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <li className="nav-link active" aria-current="page" href="/">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
-                </li>
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Link
+                  About
                 </a>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blogs
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Post 1
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Post 2
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Post 3
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
             <div className="form-check form-switch">
               <input
                 className="form-check-input"
                 type="checkbox"
+                role="switch"
                 id="flexSwitchCheckDefault"
+                onClick={props.toggelMode}
               />
               <label
-                className="form-check-label"
+                className={`form-check-label text-${
+                  props.mode === "dark" ? "light" : "dark"
+                }`}
                 htmlFor="flexSwitchCheckDefault"
               >
-                Default switch checkbox input
+                {props.text}
               </label>
             </div>
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
-};
-
-export default Navbar;
+}

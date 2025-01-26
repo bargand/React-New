@@ -1,0 +1,9 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
