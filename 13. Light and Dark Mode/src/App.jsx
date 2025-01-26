@@ -27,8 +27,8 @@ const App = () => {
     <Navbar mode ={Mode} toggelMode={toggelMode} text={Text}/>
     <Routes>
       <Route element={<Body mode={Mode}/>} path='/'/>
-      <Route element={<About/>} path='/about'/>
-      <Route element={<Contact/>} path='/contact'/>
+      <Route element={<About mode={Mode}/>} path='/about'/>
+      <Route element={<Contact mode={Mode}/>} path='/contact'/>
     </Routes>
     </BrowserRouter>
     </>
